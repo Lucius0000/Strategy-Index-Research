@@ -1,18 +1,33 @@
 ## 项目概述
 
-本项目旨在搭建一套数据自动化获取与分析工作流，用于调研中国、美国和香港三地股票市场的主流策略指数及其 ETF 在不同牛熊周期下的表现，并形成调研报告，结合 [资产管理双周报](https://github.com/Lucius0000/clone_asset_mgnt_report) 制定投资策略。
+本项目旨在搭建一套数据自动化获取与分析工作流，用于调研中国、美国和香港三地股票市场的主流策略指数及其 ETF 在不同牛熊周期下的表现，并形成调研报告，如[策略分析-大盘基线.pdf](assets/策略分析-大盘基线.pdf)，结合 [资产管理双周报](https://github.com/Lucius0000/clone_asset_mgnt_report) 制定投资策略。
 
 ## 项目结构
 
-- `assets` 存放 策略指数调研报告
-- `code` 存放 数据获取与分析脚本：
+- [assets](assets) 存放 策略指数调研报告
+
+- [code](code) 存放 数据获取与分析脚本：
   - 按照年度统计：
-    - 按照年度统计指数涨跌幅：`annual.py`
-    - 按照年度统计 ETF 涨跌幅+分红：`ETF_annual.py`
+    - 按照年度统计指数涨跌幅：[annual.py](code/annual.py)
+    - 按照年度统计 ETF 涨跌幅+分红：[ETF_annual.py](code/ETF_annual.py)
+    
   - 按照月度统计：
-    - 以下脚本需要在脚本文件夹下的子文件夹 'data' 存放 定义市场周期 的表格；直接解压压缩包即可；三个指数名称对应中美港三种市场：`data.zip`
-    - 按照市场周期统计的指数涨跌幅，脚本不分国家，需要按照市场调整配置区：`指数涨跌幅.py`
-    - 按照市场周期统计的 指数及其ETF 的表现，脚本分国家，定义指数与ETF即可：`HSI_ETF表现.py` `SPY_ETF表现.py` `CSI300_ETF表现.py`
-    - 按照市场周期统计的 指数及其ETF  的净值走势图，配置区与 "HSI-ETF表现.py" 类似：`HSI_净值曲线.py` `SP500_净值曲线.py` `CSI300_净值曲线.py`
-- `data` 存放脚本运行的依赖数据
+    - 以下脚本需要在脚本文件夹下的子文件夹 'data' 存放 定义市场周期 的表格；直接解压压缩包即可；三个指数名称对应中美港三种市场：[data.zip](code/data.zip)
+    
+    - 按照市场周期统计的指数涨跌幅，脚本不分国家，需要按照市场调整配置区：[指数涨跌幅.py](code/指数涨跌幅.py)
+    
+    - 按照市场周期统计的 指数及其ETF 的表现，脚本分国家，定义指数与ETF即可：
+  
+      [HSI_ETF表现.py](code/HSI_ETF表现.py)
+    
+      [SPY_ETF表现.py](code/SPY_ETF表现.py)
+    
+      [CSI300_ETF表现.py](code/CSI300_ETF表现.py)
+    
+    - 按照市场周期统计的指数及其 ETF 的净值走势图，配置区与 "HSI-ETF表现.py" 类似：
+    [HSI_净值曲线.py](code/HSI_净值曲线.py)
+    [SP500_净值曲线.py](code/SP500_净值曲线.py)
+    [CSI300_净值曲线.py](code/CSI300_净值曲线.py)
+  
+- [data](data) 存放脚本运行的依赖数据
 
